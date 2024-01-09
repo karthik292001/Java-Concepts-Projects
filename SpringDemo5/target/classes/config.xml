@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.kn.springdemo.Mobile" id="mob1">
+		
+		<property name="brand" value="Moto"></property>
+		<property name="cost" value="15000.00"></property>
+		<property name="ramSize" value="6"></property>
+		
+	</bean>
+	
+	<bean class="com.kn.springdemo.Mobile" id="mob2">
+		
+		<property name="brand" value="redmi"></property>
+		<property name="cost" value="18000.00"></property>
+		<property name="ramSize" value="8"></property>
+		
+	</bean>
+	
+	<bean class="com.kn.springdemo.Mobile" id="mob3">
+		
+		<constructor-arg value="oneplus"></constructor-arg>
+		<constructor-arg value="40000.00"></constructor-arg>
+		<constructor-arg value="8"></constructor-arg>
+		
+	</bean>
+	
+	
+	
+	
+	<bean class="com.kn.springdemo.Person" id="p">
+		
+		<property name="m" ref="mob1"></property>
+
+	</bean>
+	
+	
+
+</beans>

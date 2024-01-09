@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.kn.springautowiring.Engine" id="eng">
+		
+		<property name="eng_No" value="104"></property>
+		<property name="eng_type" value="four stroke"></property>
+		
+	</bean>
+	
+	
+	
+	<!-- byName will select bean if id name is same as instance variable(data member) name inside Car class -->
+	<!-- byType will work only if single bean is there for a class that we are injecting-->
+	
+	
+	<bean class="com.kn.springautowiring.Car" id="car" autowire="byType"></bean>   
+		
+	
+	
+	
+
+</beans>
